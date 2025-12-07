@@ -1,0 +1,38 @@
+.footer {
+  background-color: #9a6fae;
+  color: white;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.footerLogo {
+  max-width: 90px;
+  height: auto;
+}
+
+.footerTitle {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.footerLink {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.footerLink:hover {
+  opacity: 1;
+}
+
+.bottomBar {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  opacity: 0.85;
+}

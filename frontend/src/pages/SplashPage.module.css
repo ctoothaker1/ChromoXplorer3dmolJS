@@ -1,0 +1,39 @@
+/* SplashPage.module.css */
+
+.hero {
+  background-color: #9a6fae;
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.heroTitle {
+  font-weight: 700;
+}
+
+.heroSubtitle {
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.footer {
+  background-color: #9a6fae;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.footerColumn {
+  margin-bottom: 1.5rem;
+}
+
+.footerTitle {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
