@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "reactstrap";
 import styles from "./Footer.module.css";
-import logo from "../assets/images/logo.png"; // adjust path if needed
+import logo from "../../assets/images/logo.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Footer() {

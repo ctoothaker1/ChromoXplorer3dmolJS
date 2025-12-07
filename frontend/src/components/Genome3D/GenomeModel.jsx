@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { parsePDB } from "../utils/parsePDB";
+import { parsePDB } from "../../utils/parsing/parsePDB";
 import * as THREE from "three";
 
 function colorFromIndex(i, total) {

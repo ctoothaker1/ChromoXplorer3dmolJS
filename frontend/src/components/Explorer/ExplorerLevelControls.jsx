@@ -1,5 +1,5 @@
 import { Button } from "reactstrap";
-import styles from "../pages/ExplorerPage.module.css";
+import styles from "../../pages/ExplorerPage.module.css";
 
 export default function ExplorerLevelControls({ level, setLevel }) {
     return (

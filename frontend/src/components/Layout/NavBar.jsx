@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
 import styles from "./NavBar.module.css";
 
 export default function AppNavbar() {

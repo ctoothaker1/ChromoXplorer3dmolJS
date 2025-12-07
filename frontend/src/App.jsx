@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/NavBar.jsx";
+import Navbar from "./components/Layout/NavBar.jsx";
 import SplashPage from "./pages/SplashPage.jsx";
-import Footer from "./components/Footer.jsx";
+import Footer from "./components/Layout/Footer.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignupPage from "./pages/SignupPage.jsx";
 import ExplorerPage from "./pages/ExplorerPage.jsx";

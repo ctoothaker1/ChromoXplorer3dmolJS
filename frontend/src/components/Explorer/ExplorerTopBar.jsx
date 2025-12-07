@@ -1,7 +1,7 @@
 import { Navbar, NavbarBrand, Button, Input } from "reactstrap";
 import { useNavigate } from "react-router-dom";
-import styles from "../pages/ExplorerPage.module.css";
-import logo from "../assets/images/logo.png";
+import styles from "../../pages/ExplorerPage.module.css";
+import logo from "../../assets/images/logo.png";
 
 export default function ExplorerTopBar({ selectedCell, setSelectedCell }) {
     const navigate = useNavigate();
