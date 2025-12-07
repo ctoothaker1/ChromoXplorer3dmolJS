@@ -4,25 +4,31 @@ import styles from "../pages/ExplorerPage.module.css";
 export default function ExplorerLevelControls({ level, setLevel }) {
     return (
         <>
+            {/* Level 1 */}
             <Button
-                color={level === 1 ? "primary" : "light"}
-                className={styles.levelButton}
+                className={
+                    level === 1 ? styles.levelButtonActive : styles.levelButtonInactive
+                }
                 onClick={() => setLevel(1)}
             >
                 Level 1: Chromosome Territories
             </Button>
 
+            {/* Level 2 */}
             <Button
-                color={level === 2 ? "primary" : "light"}
-                className={styles.levelButton}
+                className={
+                    level === 2 ? styles.levelButtonActive : styles.levelButtonInactive
+                }
                 onClick={() => setLevel(2)}
             >
                 Level 2: A/B Compartments
             </Button>
 
+            {/* Level 3 */}
             <Button
-                color={level === 3 ? "primary" : "light"}
-                className={styles.levelButton}
+                className={
+                    level === 3 ? styles.levelButtonActive : styles.levelButtonInactive
+                }
                 onClick={() => setLevel(3)}
             >
                 Level 3: TAD Interactions

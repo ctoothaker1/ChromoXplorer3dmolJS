@@ -5,12 +5,13 @@ import * as THREE from "three";
  * Main genome scene router
  * Chooses which visualization level to show.
  */
-export default function GenomeScene({ level }) {
+export default function GenomeScene({ level, onSelect }) {
     return (
         <>
-            {level === 1 && <ChromosomeTerritories />}
-            {level === 2 && <CompartmentView />}
-            {level === 3 && <TadInteractionView />}
+            {level === 1 && <ChromosomeTerritories onSelect={onSelect} />}
+            {level === 2 && <CompartmentView onSelect={onSelect} />}
+            {level === 3 && <TadInteractionView onSelect={onSelect} />}
+
         </>
     );
 }
@@ -18,7 +19,7 @@ export default function GenomeScene({ level }) {
 /* -------------------------------------- */
 /* LEVEL 1 — CHROMOSOME TERRITORIES       */
 /* -------------------------------------- */
-function ChromosomeTerritories() {
+function ChromosomeTerritories({ onSelect }) {
     const chromosomes = useMemo(
         () => [
             { id: "Chr1", color: "#ff6b6b", position: [-2.5, 1.5, 0] },
@@ -45,7 +46,17 @@ function ChromosomeTerritories() {
 
             {/* Chromosome spheres */}
             {chromosomes.map((chr) => (
-                <mesh key={chr.id} position={chr.position}>
+                <mesh
+                    key={chr.id}
+                    position={chr.position}
+                    onClick={() =>
+                        onSelect({
+                            id: chr.id,
+                            type: "Chromosome Territory",
+                            description: `Mock representation of ${chr.id} within the nucleus.`,
+                        })
+                    }
+                >
                     <sphereGeometry args={[0.6, 32, 32]} />
                     <meshStandardMaterial color={chr.color} />
                 </mesh>
@@ -57,7 +68,7 @@ function ChromosomeTerritories() {
 /* -------------------------------------- */
 /* LEVEL 2 — A/B COMPARTMENTS             */
 /* -------------------------------------- */
-function CompartmentView() {
+function CompartmentView({ onSelect }) {
     const compartments = useMemo(
         () => [
             { id: "A1", type: "A", color: "#4dabf7", position: [-2, 1, 0] },
@@ -71,7 +82,13 @@ function CompartmentView() {
     return (
         <group>
             {compartments.map((c) => (
-                <mesh key={c.id} position={c.position}>
+                <mesh key={c.id} position={c.position} onClick={() =>
+                    onSelect({
+                        id: c.id,
+                        type: `Compartment ${c.type}`,
+                        description: `Mock ${c.type}-compartment.`,
+                    })
+                }>
                     <boxGeometry args={[1.4, 1.0, 1.4]} />
                     <meshStandardMaterial
                         color={c.color}
@@ -87,7 +104,7 @@ function CompartmentView() {
 /* -------------------------------------- */
 /* LEVEL 3 — TAD INTERACTION NETWORK      */
 /* -------------------------------------- */
-function TadInteractionView() {
+function TadInteractionView({ onSelect }) {
     const nodes = useMemo(
         () => [
             { id: "TAD1", position: [-2, 0, 0] },
@@ -139,7 +156,13 @@ function TadInteractionView() {
 
             {/* Draw node spheres */}
             {nodes.map((node) => (
-                <mesh key={node.id} position={node.position}>
+                <mesh key={node.id} position={node.position} onClick={() =>
+                    onSelect({
+                        id: node.id,
+                        type: "TAD Node",
+                        description: "Mock representation of a TAD interaction node.",
+                    })
+                }>
                     <sphereGeometry args={[0.3, 32, 32]} />
                     <meshStandardMaterial color="#fcc419" />
                 </mesh>

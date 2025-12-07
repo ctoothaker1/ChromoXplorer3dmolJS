@@ -17,7 +17,7 @@ export default function ExplorerTopBar({ selectedCell, setSelectedCell }) {
             </NavbarBrand>
 
             {/* CENTER — Cell Type Dropdown */}
-            <div className="mx-auto">
+            <div className={styles.dropdownCenter}>
                 <Input
                     type="select"
                     className={styles.topbarDropdown}
@@ -35,8 +35,12 @@ export default function ExplorerTopBar({ selectedCell, setSelectedCell }) {
 
             {/* RIGHT — Buttons */}
             <div className={styles.topbarRight}>
-                <Button color="light" onClick={() => navigate(-1)}>Go Back</Button>
-                <Button color="light" onClick={() => navigate("/signup")}>Sign Up</Button>
+                <Button className={styles.topbarButton} onClick={() => navigate(-1)}>
+                    Go Back
+                </Button>
+                <Button className={styles.topbarButton} onClick={() => navigate("/signup")}>
+                    Sign Up
+                </Button>
             </div>
         </Navbar>
     );

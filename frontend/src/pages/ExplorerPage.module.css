@@ -63,6 +63,82 @@
 }
 
 .levelButton {
-  width: 220px;
+  width: 240px;
   text-align: left;
+  background-color: #9a6fae !important;
+  border-color: #9a6fae !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.levelButton:hover {
+  background-color: #875e9a !important;
+  border-color: #875e9a !important;
+}
+.levelButtonActive {
+  background-color: #9a6fae !important;
+  border-color: #9a6fae !important;
+  color: white !important;
+  font-weight: 600;
+}
+
+.levelButtonInactive {
+  background-color: #f8f9fa !important; /* Bootstrap light */
+  border-color: #ced4da !important;
+  color: #333 !important;
+  font-weight: 500;
+}
+
+.dropdownCenter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 25;
+  width: 260px;
+}
+
+.topbarButton {
+  background-color: #9a6fae !important;
+  border-color: #9a6fae !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+.topbarButton:hover {
+  background-color: #875e9a !important;
+  border-color: #875e9a !important;
+}
+
+.infoPanel {
+  position: absolute;
+  top: 270px;
+  left: 20px;
+  z-index: 25;
+  width: 260px;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+  color: white;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.infoTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.infoRow {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.infoEmpty {
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
