@@ -1,57 +1,51 @@
-.pageWrapper {
-  padding: 2rem 1rem;
-}
-
-.heading {
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-}
-
-.subheading {
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-.viewerCard {
-  border-radius: 12px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+.explorerWrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
-.canvasContainer {
+/* Background 3D Scene */
+.canvasBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 420px;
-  background: #050816;
+  height: 100%;
+  z-index: 0; /* behind UI */
 }
 
-@media (min-width: 992px) {
-  .canvasContainer {
-    height: 70vh;
-  }
+/* Floating UI Panel */
+.uiContainer {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.sidebarSectionTitle {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.levelButton {
+/* Top bar */
+.topBar {
+  position: absolute;
+  top: 0;
   width: 100%;
-  text-align: left;
-  margin-bottom: 0.5rem;
-  border-radius: 8px;
+  height: 56px;
+  background: rgba(220, 219, 219, 0.45);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 20;
+  backdrop-filter: blur(5px);
 }
 
-.levelButtonActive {
-  background-color: #9a6fae !important;
-  border-color: #9a6fae !important;
-  color: #fff !important;
+.topBarBtns {
+  margin-left: auto;
+  display: flex;
+  gap: 0.75rem;
 }
 
-.legendDot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 0.4rem;
+.cellDropdownWrapper {
+  margin: 0 auto;
 }
