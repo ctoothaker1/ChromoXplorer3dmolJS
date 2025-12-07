@@ -68,7 +68,7 @@ export default function ABCompartmentView({ onSelect }) {
                 >
                     <sphereGeometry args={[0.15, 16, 16]} />
                     <meshStandardMaterial
-                        color={bin.type === "A" ? "#4dabf7" : "#adb5bd"}
+                        color={bin.type === "A" ? "#4dabf7" : "#F54927"}
                         transparent
                         opacity={bin.type === "A" ? 0.9 : 0.5}
                     />
