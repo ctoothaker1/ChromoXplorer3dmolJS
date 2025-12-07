@@ -21,8 +21,9 @@ export default function Starfield() {
                     color="#A0A0A0"
                     size={0.09} // changes dot size
                     sizeAttenuation
-                    opacity={0.85}
+                    opacity={1}
                     transparent
+                    side={THREE.BackSide}
                     depthWrite={false}
                 />
             </Points>

@@ -8,6 +8,10 @@ import ExplorerTopBar from "../components/ExplorerTopBar";
 import ExplorerLevelControls from "../components/ExplorerLevelControls";
 import GenomeScene from "../components/GenomeScene";
 import Starfield from "../components/Startfield";
+import pdbText from "../data/hierarchicalGenome.txt?raw";
+import GenomeModel from "../components/GenomeModel";
+
+
 
 export default function ExplorerPage() {
     const [level, setLevel] = useState(1);
@@ -33,7 +37,12 @@ export default function ExplorerPage() {
                     <Starfield />
 
                     {/*  */}
-                    <GenomeScene level={level} onSelect={setSelectedObject} />
+                    {level === 3 ? (
+                        <GenomeModel pdbText={pdbText} onSelect={setSelectedObject} />
+                    ) : (
+                        <GenomeScene level={level} onSelect={setSelectedObject} />
+                    )}
+
                 </Canvas>
             </div>
 

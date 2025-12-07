@@ -24,14 +24,14 @@ export default function ExplorerLevelControls({ level, setLevel }) {
                 Level 2: A/B Compartments
             </Button>
 
-            {/* Level 3 */}
+            {/* Level 3 → Real Genome Model */}
             <Button
                 className={
                     level === 3 ? styles.levelButtonActive : styles.levelButtonInactive
                 }
                 onClick={() => setLevel(3)}
             >
-                Level 3: TAD Interactions
+                Level 3: Genome Model
             </Button>
         </>
     );
