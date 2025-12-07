@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import {
     Container,
     Form,
@@ -12,29 +13,38 @@ import styles from "./LoginPage.module.css";
 
 export default function LoginPage() {
     const navigate = useNavigate();
+    const { login } = useAuth();   // <-- Now available
 
     // Form state
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    // Simple prototype authentication using localStorage
-    const handleLogin = (e) => {
-        e.preventDefault();
+    function handleLogin(e) {
+        e.preventDefault(); // <-- prevents page refresh
 
-        const storedUser = JSON.parse(localStorage.getItem("user"));
-
-        if (!storedUser) {
-            return setError("No account found. Please sign up first.");
-        }
-
-        if (storedUser.email === email && storedUser.password === password) {
-            localStorage.setItem("loggedIn", "true");
-            navigate("/explorer");
+        if (email === "admin@test.com") {
+            login({
+                name: "Admin User",
+                email,
+                role: "admin"
+            });
+        } else if (email === "paid@test.com") {
+            login({
+                name: "Paid User",
+                email,
+                role: "paid"
+            });
         } else {
-            setError("Invalid email or password.");
+            login({
+                name: "Standard User",
+                email,
+                role: "user"
+            });
         }
-    };
+
+        navigate("/account");
+    }
 
     return (
         <div className={styles.pageWrapper}>

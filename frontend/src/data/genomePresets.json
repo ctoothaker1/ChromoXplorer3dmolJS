@@ -1,0 +1,16 @@
+[
+  {
+    "id": "gm12878_chr1_1mb",
+    "name": "GM12878 – Chr1 (1Mb bins)",
+    "description": "1Mb resolution Hi-C 3D model of Chromosome 1",
+    "file": "mockGenomeFile.txt",
+    "active": true
+  },
+  {
+    "id": "example_demo",
+    "name": "Demo Dataset",
+    "description": "Mock dataset for demonstration purposes",
+    "file": "hierarchicalGenome.txt",
+    "active": false
+  }
+]

@@ -1,0 +1,17 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.purpleButton {
+  background: #6f42c1 !important;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+}
