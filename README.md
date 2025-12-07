@@ -211,4 +211,13 @@ Password: (just type anything in the login page)
 
 ## Authors
 
-**David Loder**
+- **David Loder**
+- **Y Kien Mai**
+- **Charlie Toothaker**
+- **Michael Balogun**
+- **Danny Huang**
+- **Jans Tarriela**
+- **Nour Ayyash**
+- **Noah Memon**
+- **Blake Weitzel**
+- **Violet Nguyen**
