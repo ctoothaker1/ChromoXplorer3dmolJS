@@ -270,7 +270,7 @@ export default function PDBViewerPage() {
             <strong>Chain:</strong> {selectedAtom.chain}
           </div>
           <div className={styles.infoRow}>
-            <strong>Position:</strong> ({selectedAtom.x}, {selectedAtom.y}, {selectedAtom.z})
+            <strong>Position:</strong> (x: {selectedAtom.x}, y: {selectedAtom.y}, z: {selectedAtom.z})
           </div>
         </div>
       ) : (
