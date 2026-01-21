@@ -58,14 +58,15 @@ export default function PDBViewerPage() {
 
     viewerRef.current.setClickable({}, true, (atom) => {
       setSelectedAtom({
-        element: atom.elem,
-        residue: atom.resn,
-        residueNumber: atom.resi,
-        chain: atom.chain,
-        atom: atom.atom,
-        x: atom.x?.toFixed(2),
-        y: atom.y?.toFixed(2),
-        z: atom.z?.toFixed(2)
+        element: atom.elem || atom.atom || 'N/A',
+        residue: atom.resn || 'N/A',
+        residueNumber: atom.resi || 'N/A',
+        chain: atom.chain || 'N/A',
+        atom: atom.atom || 'N/A',
+        serial: atom.serial || 'N/A',
+        x: atom.x?.toFixed(2) || 'N/A',
+        y: atom.y?.toFixed(2) || 'N/A',
+        z: atom.z?.toFixed(2) || 'N/A'
       });
     });
   };
@@ -257,6 +258,9 @@ export default function PDBViewerPage() {
       {selectedAtom ? (
         <div className={styles.infoPanel}>
           <div className={styles.infoTitle}>Selected Atom</div>
+          <div className={styles.infoRow}>
+            <strong>Serial:</strong> {selectedAtom.serial}
+          </div>
           <div className={styles.infoRow}>
             <strong>Element:</strong> {selectedAtom.element}
           </div>
