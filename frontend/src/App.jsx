@@ -9,6 +9,7 @@ import ExplorerPage from "./pages/ExplorerPage.jsx";
 import AccountPage from "./pages/AccountPage.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
 import ManageDatasetsPage from "./pages/ManageDatasetsPage.jsx";
+import PDBViewerPage from './pages/PDBViewerPage';
 
 export default function App() {
   return (
@@ -43,6 +44,7 @@ function AppContent() {
         <Route path="/account" element={<AccountPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="/admin/datasets" element={<ManageDatasetsPage />} />
+        <Route path="/pdb-viewer" element={<PDBViewerPage />} />
 
       </Routes>
 
